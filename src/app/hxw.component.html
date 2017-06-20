@@ -1,0 +1,19 @@
+<h3>Known Good Roll</h3>
+<label for="footage" [(ngModel)]="knownFootage" ngDefaultControl>Footage:</label>
+<input type="number">
+<label for="poundage" [(ngModel)]="knownPoundage" ngDefaultControl>Poundage:</label>
+<input type="number">
+
+<h3>Roll In Question</h3>
+
+<label>Footage:</label>
+<input type="number" [(ngModel)]="questionFootage" ngDefaultControl>
+<label>Poundage:</label>
+<input type="number" [(ngModel)]="questionPoundage" ngDefaultControl>
+
+<br><br>
+
+<button (click)="calculate()">Calculate</button>
+<button>Clear</button>
+<button>Help</button>
+<button (click)="temp()">Test</button>
