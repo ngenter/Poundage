@@ -14,20 +14,13 @@ export class HxwComponent {
     answer: number = null;
     rollIs: string = null;
     
-
     showAnswer: boolean = false;
     showInvalid: boolean = false;
     showHelp: boolean = false;
     
     calculate(){
         if (this.questionFootage  == null && this.questionPoundage == null && this.showInvalid == false){
-            if (this.showInvalid = false){
-                
-            }
-            this.showInvalid = true
-            
-            
-            
+            this.showInvalid = !this.showInvalid
         }
 
         if (this.questionFootage == null)
@@ -66,10 +59,11 @@ export class HxwComponent {
         this.answer = null;
         this.showAnswer = false;
         this.showHelp = false;
+        this.showInvalid = false;
     }
 
     help(){
-        this.showHelp = true;
+        this.showHelp = !this.showHelp;
     }
 
 }

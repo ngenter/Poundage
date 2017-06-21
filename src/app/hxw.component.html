@@ -1,15 +1,18 @@
-<h3>Known Good Roll</h3>
-<label for="footage">Feet:</label>
-<input type="number" [(ngModel)]="knownFootage">
-<label for="poundage">Pounds:</label>
-<input type="number" [(ngModel)]="knownPoundage">
+<div>
+    <h3>Known Good Roll</h3>
+    <label for="footage">Feet:</label>
+    <input type="number" [(ngModel)]="knownFootage" >
+    <label for="poundage">Pounds:</label>
+    <input type="number" [(ngModel)]="knownPoundage" >
+</div>
+    <h3>Roll In Question</h3>
 
-<h3>Roll In Question</h3>
-
+<div>
 <label>Feet:</label>
-<input type="number" [(ngModel)]="questionFootage" (keyup)="clearPoundage()">
+    <input type="number" [(ngModel)]="questionFootage" (keyup)="clearPoundage()" >
 <label>Pounds:</label>
-<input type="number" [(ngModel)]="questionPoundage" (keyup)="clearFootage()">
+    <input type="number" [(ngModel)]="questionPoundage" (keyup)="clearFootage()">
+</div>
 
 <br><br>
 
@@ -22,8 +25,6 @@
 <div *ngIf="showAnswer">
     <h3>Your roll is {{ answer }}  {{ rollIs }}</h3>
 </div>
-
-
 
 <div *ngIf="showHelp">
     <h3>Help</h3>
