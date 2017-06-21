@@ -14,27 +14,41 @@ export class HxwComponent {
     answer: number = null;
     rollIs: string = null;
     
+
     showAnswer: boolean = false;
+    showInvalid: boolean = false;
     showHelp: boolean = false;
     
     calculate(){
+        if (this.questionFootage  == null && this.questionPoundage == null && this.showInvalid == false){
+            if (this.showInvalid = false){
+                
+            }
+            this.showInvalid = true
+            
+            
+            
+        }
+
         if (this.questionFootage == null)
             {
             this.answer = (this.knownFootage / this.knownPoundage * this.questionPoundage)
-            console.log(this.answer)
             this.showAnswer = !this.showAnswer
             this.rollIs = "feet"
         }
         
-        else {
+        if (this.questionPoundage == null)
+            {
+
             this.answer = (this.knownPoundage / this.knownFootage * this.questionFootage)
-            console.log(this.answer)
             this.showAnswer = !this.showAnswer
             this.rollIs = "pounds"
         }
 
+        else {
+            this.showInvalid = !this.showInvalid
+        }
     }
-
 
     clearFootage(){
         this.questionFootage = null;
@@ -58,5 +72,4 @@ export class HxwComponent {
         this.showHelp = true;
     }
 
-    
 }

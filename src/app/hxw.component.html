@@ -20,7 +20,7 @@
 <br>
 
 <div *ngIf="showAnswer">
-    <h3>Your roll is {{ answer }}  {{rollIs}}</h3>
+    <h3>Your roll is {{ answer }}  {{ rollIs }}</h3>
 </div>
 
 
@@ -30,6 +30,8 @@
     <p>Enter the 'Feet' and 'Pounds' of a known roll.</p>
     <p>Enter in either the 'Feet' or 'Pounds' of the roll you are trying to calculate</p>
     <p>Click Calculate</p>
+</div>
 
-
+<div *ngIf="showInvalid">
+    <h3>Invalid Entry</h3>
 </div>
