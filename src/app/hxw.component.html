@@ -1,20 +1,35 @@
 <h3>Known Good Roll</h3>
-<label for="footage">Footage:</label>
+<label for="footage">Feet:</label>
 <input type="number" [(ngModel)]="knownFootage">
-<label for="poundage">Poundage:</label>
+<label for="poundage">Pounds:</label>
 <input type="number" [(ngModel)]="knownPoundage">
 
 <h3>Roll In Question</h3>
 
-<label>Footage:</label>
+<label>Feet:</label>
 <input type="number" [(ngModel)]="questionFootage" (keyup)="clearPoundage()">
-<label>Poundage:</label>
+<label>Pounds:</label>
 <input type="number" [(ngModel)]="questionPoundage" (keyup)="clearFootage()">
 
 <br><br>
 
 <button (click)="calculate()">Calculate</button>
-<button>Clear</button>
-<button>Help</button>
+<button (click)="clearAll()">Clear</button>
+<button (click)="help()">Help</button>
 
-<div *ngIf="showAnswer">Text to show: {{ answer }}</div>
+<br>
+
+<div *ngIf="showAnswer">
+    <h3>Your roll is {{ answer }}  {{rollIs}}</h3>
+</div>
+
+
+
+<div *ngIf="showHelp">
+    <h3>Help</h3>
+    <p>Enter the 'Feet' and 'Pounds' of a known roll.</p>
+    <p>Enter in either the 'Feet' or 'Pounds' of the roll you are trying to calculate</p>
+    <p>Click Calculate</p>
+
+
+</div>
