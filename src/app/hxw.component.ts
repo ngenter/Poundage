@@ -13,28 +13,32 @@ export class HxwComponent {
     questionPoundage: number;
     answer: number = null;
 
-    // 2000 / 100 * 50
-
-   /* calculate(){
+    showAnswer: boolean = false;
+    
+    calculate(){
         if (this.questionFootage == null)
             {
             this.answer = (this.knownFootage / this.knownPoundage * this.questionPoundage)
             console.log(this.answer)
-            console.log("some shit")
-            }
+            this.showAnswer = !this.showAnswer
+        }
+        
+        else {
+            this.answer = (this.knownPoundage / this.knownFootage * this.questionFootage)
+            console.log(this.answer)
+            this.showAnswer = !this.showAnswer
+        }
 
     }
-*/
 
-    clear(){
 
+    clearFootage(){
+        this.questionFootage = null;
     }
 
-    temp(){
-               
-        console.log(this.knownFootage)
-        //console.log(this.knownFootage*1)
-        //var total = (this.knownFootage * this.knownPoundage)
-        //console.log(total)
+    clearPoundage(){
+        this.questionPoundage = null;
     }
+
+    
 }
